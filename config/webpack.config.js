@@ -24,10 +24,10 @@ module.exports = function webpackConfig(webpackEnv) {
       pathinfo: isEnvDevelopment,
       publicPath: '/',
       filename: isEnvProduction
-        ? 'static/js/[name].[contenthash:8].js'
+        ? './static/js/[name].[contenthash:8].js'
         : isEnvDevelopment && 'static/js/bundle.js',
       chunkFilename: isEnvProduction
-        ? 'static/js/[name].[contenthash:8].chunk.js'
+        ? './static/js/[name].[contenthash:8].chunk.js'
         : isEnvDevelopment && 'static/js/[name].chunk.js',
     },
     module: {
@@ -113,8 +113,8 @@ module.exports = function webpackConfig(webpackEnv) {
         && new WatchMissingNodeModulesPlugin(paths.appNodeModules),
       isEnvProduction
         && new MiniCssExtractPlugin({
-          filename: 'static/css/[name].[contenthash:8].css',
-          chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+          filename: './static/css/[name].[contenthash:8].css',
+          chunkFilename: './static/css/[name].[contenthash:8].chunk.css',
         }),
     ].filter(Boolean),
   };
