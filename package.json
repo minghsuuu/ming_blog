@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "start": "npm run clean && webpack-dev-server --config ./config/webpack.dev.js",
-    "build": "npm run clean && webpack --config ./config/webpack.prod.js",
+    "start": "npm run clean && webpack-dev-server --config config/webpack.dev.js",
+    "build": "npm run clean && webpack --config config/webpack.prod.js",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -53,6 +54,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.2",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "react-dev-utils": "^10.2.1",
